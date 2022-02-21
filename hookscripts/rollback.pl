@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#https://foxi.buduanwang.vip
+#https://foxi.buduanwang.vip/virtualization/pve/1592.html/
 use PVE::QemuServer;
 
 use strict;
