@@ -10,7 +10,7 @@ print "GUEST HOOK: ".join(' ', @ARGV).
 my $vmid = shift;
 my $conf = PVE::QemuConfig->load_config($vmid);
 my $phase = shift;
-my $vmpath = "/mnt/pve/Nvme"
+my $vmpath = "/mnt/pve/Nvme";
 my $cmd ="qemu-img snapshot -a snapshot $vmpath/images/$vmid/vm-$vmid-disk-0.qcow2";
 
 if ($phase eq 'pre-start') {
