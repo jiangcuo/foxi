@@ -28,7 +28,7 @@ modiy_modules(){
 
 edit_cmdline(){
     cp /etc/kernel/cmdline /opt/foxi_backup/cmdline_$(date +%s)
-    echo 'GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on i915.enable_gvt=1"' > /etc/kernel/cmdline
+    echo  `cat /etc/kernel/cmdline` 'quiet intel_iommu=on i915.enable_gvt=1' > /etc/kernel/cmdline
     proxmox-boot-tool refresh > /dev/null 2>&1
     echo "cmdline修改完成"
 }
